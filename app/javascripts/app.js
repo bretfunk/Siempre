@@ -12,38 +12,39 @@ import location_artifacts from '../../build/contracts/Location.json'
 // MetaCoin is our usable abstraction, which we'll use through the code below.
 var Location = contract(location_artifacts);
 
+
 // The following code is simple to show off interacting with your contracts.
 // As your needs grow you will likely need to change its form and structure.
 // For application bootstrapping, check out window.addEventListener below.
 //var accounts;
 //var account;
 
-window.App = {
-  start: function() {
-    var self = this;
+//window.App = {
+  //start: function() {
+    //var self = this;
 
-    // Bootstrap the MetaCoin abstraction for Use.
-    Location.setProvider(web3.currentProvider);
+    //// Bootstrap the MetaCoin abstraction for Use.
+    //Location.setProvider(web3.currentProvider);
 
-    // Get the initial account balance so it can be displayed.
-    web3.eth.getAccounts(function(err, accs) {
-      if (err != null) {
-        alert("There was an error fetching your accounts.");
-        return;
-      }
+    //// Get the initial account balance so it can be displayed.
+    //web3.eth.getAccounts(function(err, accs) {
+      //if (err != null) {
+        //alert("There was an error fetching your accounts.");
+        //return;
+      //}
 
-      if (accs.length == 0) {
-        alert("Couldn't get any accounts! Make sure your Ethereum client is configured correctly.");
-        return;
-      }
+      //if (accs.length == 0) {
+        //alert("Couldn't get any accounts! Make sure your Ethereum client is configured correctly.");
+        //return;
+      //}
 
-      accounts = accs;
-      account = accounts[0];
+      //accounts = accs;
+      //account = accounts[0];
 
-      self.refreshBalance();
-    });
-  },
-}
+      //self.refreshBalance();
+    //});
+  //},
+//}
 
   //setStatus: function(message) {
     //var status = document.getElementById("status");
